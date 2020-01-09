@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Remnant of a bygone Era</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+<button onclick="expandVertically()">Add a floor</button>
+<button onclick="shrinkVertically()">Remove a floor</button>
+<button onclick="expandHorizontally()">Add a residental gate</button>
+<button onclick="shrinkHorizontally()">Remove the residental gate</button>
+
+<div class="mainContainer"> <!--ADDED THIS DIV TO MANAGE THE TABLE SIZE-->
+    <table class="main" id="tableGrid" cellspacing="0" cellpadding="0">
+            <td>Row1 cell1</td>
+            <td>Row1 cell2</td>
+        </tr>
+        <tr>
+            <td>Row2 cell1</td>
+            <td>Row2 cell2</td>
+        </tr>
+        <tr>
+            <td>Row3 cell1</td>
+            <td>Row3 cell2</td>
+        </tr>
+    </table>
+</div>
+    
+<!--SCRIPTS LOAD LAST, SO THEY REFERENCE EXISTING DOM (DOCUMENT OBJECT MODEL) FEATURES-->
+<script src="scripts/tableManipulation.js">
+</script>
+</body>
+</html>
+    
