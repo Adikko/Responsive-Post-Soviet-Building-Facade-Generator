@@ -1,14 +1,10 @@
-function addRandomWindow () { //adding random *.png file, so the generated building looks more organic
-
-}
-
 function expandVertically() {
     let table = document.getElementById("tableGrid"); //accessing the table
     let addOneRow = table.insertRow(0); //adding a row
     let howManyCells = table.rows[1].cells.length; //checking the first row, since shrinkVertically() does not allow for it to disappear
     for (i = 0; i < howManyCells; i++) { //adding as many cells, as we need to keep the table matrix intact. This procedure loops over the quantity of cells in the first row
         let addOneCell = addOneRow.insertCell(i);
-        addOneCell.innerHTML = "CELL" + i;
+        addOneCell.innerHTML = appendRandomPicture();
     }
 }
   
@@ -27,7 +23,7 @@ function expandHorizontally() {
     let howManyRows = table.rows.length; //checking how many rows are there
     for (i = 0; i <= howManyRows; i++) {
         let addCellToEveryRow = table.rows[i].insertCell(-1);
-        addCellToEveryRow.innerHTML = "CELL" + i;
+        addCellToEveryRow.innerHTML = appendRandomPicture();
     }
 }
 
